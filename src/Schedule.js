@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Grid, Input } from 'semantic-ui-react';
+import { Grid, Input, Divider } from 'semantic-ui-react';
 import ScheduleTable from './ScheduleTable';
+import Footer from './Footer';
 import './App.css';
 
 export default class Schedule extends Component {
@@ -29,6 +30,8 @@ export default class Schedule extends Component {
             </Grid.Column>
           </Grid.Row>
         </Grid>
+        <Divider />
+        <Footer />
        <div ref={bottom => { this.bottom = bottom; }} />
       </div>
     );

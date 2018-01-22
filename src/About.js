@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Segment } from 'semantic-ui-react';
-import Footer from './Footer';
+import { Segment, Divider } from 'semantic-ui-react';
 import './App.css';
+import Footer from './Footer';
 
 const style = {
   padding: "2em 2em",
@@ -62,8 +62,9 @@ export default class About extends Component {
           sollicitudin et laoreet ut, fermentum eget orci. Suspendisse lobortis sem ac vulputate cursus.
           </p>
         </Segment>
+        <Divider />
+        <Footer />
        <div ref={bottom => { this.bottom = bottom; }} />
-       <Footer />
       </div>
     );
   }

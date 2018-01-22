@@ -1,19 +1,20 @@
 import React, { Component } from 'react';
-import { Menu, Divider } from 'semantic-ui-react';
+import { Menu } from 'semantic-ui-react';
+
+const style = {
+  margin: 0,
+}
 
 export default class Footer extends Component {
   scrollToTop = () => {
-    document.body.scrollTop = 0;
+    window.scrollTo(0,0);
   }
 
   render() {
     return (
-      <div className="footer">
-        <Divider horizontal />
-        <Menu text>
-          <Menu.Item onClick={this.scrollToTop}>Back to top</Menu.Item>
-        </Menu>
-      </div>
+      <Menu text style={style}>
+        <Menu.Item icon="chevron up" name="top" onClick={this.scrollToTop} position="right">Back to top</Menu.Item>
+      </Menu>
     );
   }
 }
